@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ShopeeDatabase" uuid="ccd4d771-b215-4738-8c5c-81e87d6bd651">
+    <data-source source="LOCAL" name="SaleDB" uuid="b8b449b8-fa81-48a3-9bb6-37e143ec9c51">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/shopee</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/saledb</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.host.port" />
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />

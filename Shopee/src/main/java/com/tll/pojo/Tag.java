@@ -5,8 +5,8 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "category")
-public class Category {
+@Table(name = "tag")
+public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -15,11 +15,11 @@ public class Category {
     @Column(name = "name", nullable = false, length = 45)
     private String name;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "tagcol", length = 45)
+    private String tagcol;
 
-    @OneToMany(mappedBy = "category")
-    private Set<Product> products = new LinkedHashSet<>();
+    @OneToMany(mappedBy = "tag")
+    private Set<ProdTag> prodTags = new LinkedHashSet<>();
 
     public Integer getId() {
         return id;
@@ -37,20 +37,20 @@ public class Category {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getTagcol() {
+        return tagcol;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setTagcol(String tagcol) {
+        this.tagcol = tagcol;
     }
 
-    public Set<Product> getProducts() {
-        return products;
+    public Set<ProdTag> getProdTags() {
+        return prodTags;
     }
 
-    public void setProducts(Set<Product> products) {
-        this.products = products;
+    public void setProdTags(Set<ProdTag> prodTags) {
+        this.prodTags = prodTags;
     }
 
 }

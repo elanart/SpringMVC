@@ -1,15 +1,10 @@
 package com.tll.pojo;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 import java.time.Instant;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-@Getter
-@Setter
 @Entity
 @Table(name = "sale_order")
 public class SaleOrder {
@@ -18,7 +13,7 @@ public class SaleOrder {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "created_date")
+    @Column(name = "created_date", nullable = false)
     private Instant createdDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -27,5 +22,37 @@ public class SaleOrder {
 
     @OneToMany(mappedBy = "order")
     private Set<OrderDetail> orderDetails = new LinkedHashSet<>();
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Instant getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Instant createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Set<OrderDetail> getOrderDetails() {
+        return orderDetails;
+    }
+
+    public void setOrderDetails(Set<OrderDetail> orderDetails) {
+        this.orderDetails = orderDetails;
+    }
 
 }

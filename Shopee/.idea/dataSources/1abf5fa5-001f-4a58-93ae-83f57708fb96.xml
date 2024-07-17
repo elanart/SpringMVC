@@ -1029,7 +1029,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="299" parent="1" name="shopee">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-07-16.13:16:57</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-07-17.03:33:35</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="300" parent="1" name="sys">

@@ -14,7 +14,9 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @EnableTransactionManagement
 @ComponentScan(basePackages = {
-        "com.tll.controllers"
+        "com.tll.controllers",
+        "com.tll.repository",
+        "com.tll.services"
 })
 public class WebApplicationContextConfigs implements WebMvcConfigurer {
     @Override
@@ -23,12 +25,12 @@ public class WebApplicationContextConfigs implements WebMvcConfigurer {
     }
 
     @Bean
-    public InternalResourceViewResolver getInternalResourceViewResolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setViewClass(JstlView.class);
-        resolver.setPrefix("/WEB-INF/pages/");
-        resolver.setSuffix(".jsp");
+    public InternalResourceViewResolver viewResolver() {
+        InternalResourceViewResolver r = new InternalResourceViewResolver();
+        r.setViewClass(JstlView.class);
+        r.setPrefix("/WEB-INF/pages/");
+        r.setSuffix(".jsp");
 
-        return resolver;
+        return r;
     }
 }
